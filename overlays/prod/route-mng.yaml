@@ -11,7 +11,10 @@ spec:
   to:
     kind: Service
     name: prod-frontend
-    weight: 100i
+    weight: 100
+  port:
+    targetPort: 8080
   tls:
     termination: edge
+    insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
